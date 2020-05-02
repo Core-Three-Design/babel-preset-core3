@@ -3,6 +3,7 @@ import presetEnv from "@babel/preset-env";
 import presetReact from "@babel/preset-react";
 import classProperties from "@babel/plugin-proposal-class-properties";
 import privateMethods from "@babel/plugin-proposal-private-methods";
+import optionalChaining from "@babel/plugin-proposal-optional-chaining";
 
 export default declare((api, opts) => {
   api.assertVersion(7);
@@ -28,6 +29,7 @@ export default declare((api, opts) => {
       presetReact,
     ],
     plugins: [
+      optionalChaining,
       classProperties,
       privateMethods,
     ],
